@@ -1,0 +1,644 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Aug 11 20:21:12 2024
+# Process ID: 6752
+# Current directory: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1
+# Command line: vivado -log snncore.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source snncore.tcl
+# Log file: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/snncore.vds
+# Journal file: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/vivado.jou
+# Running On: n3-43-220.dhcp.drexel.edu, OS: Linux, CPU Frequency: 4419.998 MHz, CPU Physical cores: 4, Host memory: 7955 MB
+#-----------------------------------------------------------
+source snncore.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1486.887 ; gain = 9.930 ; free physical = 122 ; free virtual = 7769
+Command: read_checkpoint -auto_incremental -incremental /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.srcs/utils_1/imports/synth_1/snncore.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.srcs/utils_1/imports/synth_1/snncore.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top snncore -part xcku5p-ffvb676-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku5p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku5p'
+INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
+INFO: [Device 21-403] Loading part xcku5p-ffvb676-2-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6775
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2834.562 ; gain = 330.863 ; free physical = 197 ; free virtual = 5341
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'snncore' [/home/johncrespo/quantisenc-public/src/snncore.v:39]
+INFO: [Synth 8-6157] synthesizing module 'layer' [/home/johncrespo/quantisenc-public/src/layer.v:33]
+	Parameter FANIN bound to: 20 - type: integer 
+	Parameter FANOUT bound to: 20 - type: integer 
+	Parameter INTEGER_PRECISION bound to: 3 - type: integer 
+	Parameter DECIMAL_PRECISION bound to: 4 - type: integer 
+	Parameter ADDR_WIDTH_NEURON bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH_FANIN bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cuba_lif' [/home/johncrespo/quantisenc-public/src/cuba_lif.v:35]
+	Parameter FANIN bound to: 20 - type: integer 
+	Parameter INTEGER_PRECISION bound to: 3 - type: integer 
+	Parameter DECIMAL_PRECISION bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bmem' [/home/johncrespo/quantisenc-public/src/bmem.v:37]
+	Parameter FANIN bound to: 20 - type: integer 
+	Parameter INTEGER_PRECISION bound to: 3 - type: integer 
+	Parameter DECIMAL_PRECISION bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'qadd' [/home/johncrespo/quantisenc-public/src/qadd.v:32]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qadd' (0#1) [/home/johncrespo/quantisenc-public/src/qadd.v:32]
+INFO: [Synth 8-6157] synthesizing module 'synchronizer' [/home/johncrespo/quantisenc-public/src/synchronizer.v:32]
+	Parameter N bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'synchronizer' (0#1) [/home/johncrespo/quantisenc-public/src/synchronizer.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'bmem' (0#1) [/home/johncrespo/quantisenc-public/src/bmem.v:37]
+INFO: [Synth 8-6157] synthesizing module 'lif' [/home/johncrespo/quantisenc-public/src/lif.v:32]
+	Parameter INTEGER_PRECISION bound to: 3 - type: integer 
+	Parameter DECIMAL_PRECISION bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'twos_complement' [/home/johncrespo/quantisenc-public/src/twos_complement.v:31]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'twos_complement' (0#1) [/home/johncrespo/quantisenc-public/src/twos_complement.v:31]
+INFO: [Synth 8-6157] synthesizing module 'qmult' [/home/johncrespo/quantisenc-public/src/qmul.v:37]
+	Parameter Q bound to: 4 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qmult' (0#1) [/home/johncrespo/quantisenc-public/src/qmul.v:37]
+INFO: [Synth 8-6157] synthesizing module 'qalu' [/home/johncrespo/quantisenc-public/src/qalu.v:43]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qalu' (0#1) [/home/johncrespo/quantisenc-public/src/qalu.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'lif' (0#1) [/home/johncrespo/quantisenc-public/src/lif.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'cuba_lif' (0#1) [/home/johncrespo/quantisenc-public/src/cuba_lif.v:35]
+INFO: [Synth 8-6157] synthesizing module 'parameterized_decoder' [/home/johncrespo/quantisenc-public/src/parameterized_decoder.sv:31]
+	Parameter N bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'parameterized_decoder' (0#1) [/home/johncrespo/quantisenc-public/src/parameterized_decoder.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'syn_access' [/home/johncrespo/quantisenc-public/src/syn_access.v:35]
+	Parameter FANIN bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'syn_access' (0#1) [/home/johncrespo/quantisenc-public/src/syn_access.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'layer' (0#1) [/home/johncrespo/quantisenc-public/src/layer.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'wr_addr' does not match port width (24) of module 'layer' [/home/johncrespo/quantisenc-public/src/snncore.v:150]
+WARNING: [Synth 8-689] width (32) of port connection 'wr_data' does not match port width (5) of module 'layer' [/home/johncrespo/quantisenc-public/src/snncore.v:151]
+WARNING: [Synth 8-689] width (32) of port connection 'monitor_id' does not match port width (12) of module 'layer' [/home/johncrespo/quantisenc-public/src/snncore.v:153]
+INFO: [Synth 8-6157] synthesizing module 'parameterized_decoder__parameterized0' [/home/johncrespo/quantisenc-public/src/parameterized_decoder.sv:31]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'parameterized_decoder__parameterized0' (0#1) [/home/johncrespo/quantisenc-public/src/parameterized_decoder.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/johncrespo/quantisenc-public/src/decoder.v:45]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter CFG_REG bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [/home/johncrespo/quantisenc-public/src/decoder.v:45]
+WARNING: [Synth 8-689] width (32) of port connection 'wr_addr' does not match port width (24) of module 'layer' [/home/johncrespo/quantisenc-public/src/snncore.v:120]
+WARNING: [Synth 8-689] width (32) of port connection 'wr_data' does not match port width (5) of module 'layer' [/home/johncrespo/quantisenc-public/src/snncore.v:121]
+WARNING: [Synth 8-689] width (32) of port connection 'monitor_id' does not match port width (12) of module 'layer' [/home/johncrespo/quantisenc-public/src/snncore.v:123]
+INFO: [Synth 8-6157] synthesizing module 'layer__parameterized0' [/home/johncrespo/quantisenc-public/src/layer.v:33]
+	Parameter FANIN bound to: 20 - type: integer 
+	Parameter FANOUT bound to: 10 - type: integer 
+	Parameter INTEGER_PRECISION bound to: 3 - type: integer 
+	Parameter DECIMAL_PRECISION bound to: 4 - type: integer 
+	Parameter ADDR_WIDTH_NEURON bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH_FANIN bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'parameterized_decoder__parameterized1' [/home/johncrespo/quantisenc-public/src/parameterized_decoder.sv:31]
+	Parameter N bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'parameterized_decoder__parameterized1' (0#1) [/home/johncrespo/quantisenc-public/src/parameterized_decoder.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'layer__parameterized0' (0#1) [/home/johncrespo/quantisenc-public/src/layer.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'wr_addr' does not match port width (24) of module 'layer__parameterized0' [/home/johncrespo/quantisenc-public/src/snncore.v:179]
+WARNING: [Synth 8-689] width (32) of port connection 'wr_data' does not match port width (5) of module 'layer__parameterized0' [/home/johncrespo/quantisenc-public/src/snncore.v:180]
+WARNING: [Synth 8-689] width (32) of port connection 'monitor_id' does not match port width (12) of module 'layer__parameterized0' [/home/johncrespo/quantisenc-public/src/snncore.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'snncore' (0#1) [/home/johncrespo/quantisenc-public/src/snncore.v:39]
+WARNING: [Synth 8-3917] design snncore has port gpout[31] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[30] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[29] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[28] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[27] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[26] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[25] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[24] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[23] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[22] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[21] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[20] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[19] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[18] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[17] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[16] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[15] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[14] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[13] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[12] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[11] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[10] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[9] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[8] driven by constant 0
+WARNING: [Synth 8-7129] Port sel in module qalu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[23] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[22] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[21] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[20] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[19] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[18] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[17] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[16] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[11] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[10] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[9] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[8] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[7] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[6] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[5] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[11] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[10] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[9] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[8] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[7] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[6] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[5] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[4] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[23] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[22] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[21] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[20] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[19] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[18] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[17] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[11] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[10] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[9] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[8] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[7] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[6] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[5] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[11] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[10] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[9] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[8] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[7] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[6] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[5] in module layer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2912.500 ; gain = 408.801 ; free physical = 221 ; free virtual = 5272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2924.375 ; gain = 420.676 ; free physical = 220 ; free virtual = 5270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2924.375 ; gain = 420.676 ; free physical = 220 ; free virtual = 5270
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2924.375 ; gain = 0.000 ; free physical = 192 ; free virtual = 5287
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/johncrespo/quantisenc-public/xdc/snncore_constraints.xdc]
+Finished Parsing XDC File [/home/johncrespo/quantisenc-public/xdc/snncore_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/johncrespo/quantisenc-public/xdc/snncore_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/snncore_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/snncore_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3068.125 ; gain = 0.000 ; free physical = 144 ; free virtual = 5262
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3068.160 ; gain = 0.000 ; free physical = 143 ; free virtual = 5262
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3068.160 ; gain = 564.461 ; free physical = 136 ; free virtual = 5253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku5p-ffvb676-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3068.160 ; gain = 564.461 ; free physical = 136 ; free virtual = 5253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3068.160 ; gain = 564.461 ; free physical = 136 ; free virtual = 5253
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7082] The signal mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (5 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 5 for RAM "bmem:/mem_reg"
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3068.160 ; gain = 564.461 ; free physical = 126 ; free virtual = 5246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 350   
+	   2 Input    8 Bit       Adders := 50    
+	   2 Input    7 Bit       Adders := 300   
+	   2 Input    5 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 100   
++---Registers : 
+	               32 Bit    Registers := 8     
+	               20 Bit    Registers := 9     
+	                9 Bit    Registers := 100   
+	                8 Bit    Registers := 150   
+	                5 Bit    Registers := 53    
+	                1 Bit    Registers := 153   
++---RAMs : 
+	              100 Bit	(20 X 5 bit)          RAMs := 50    
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1550  
+	   4 Input    8 Bit        Muxes := 100   
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 100   
+	   2 Input    5 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 109   
+	   3 Input    1 Bit        Muxes := 50    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1824 (col length:96)
+BRAMs: 960 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design snncore has port gpout[31] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[30] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[29] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[28] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[27] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[26] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[25] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[24] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[23] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[22] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[21] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[20] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[19] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[18] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[17] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[16] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[15] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[14] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[13] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[12] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[11] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[10] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[9] driven by constant 0
+WARNING: [Synth 8-3917] design snncore has port gpout[8] driven by constant 0
+WARNING: [Synth 8-7129] Port wr_addr[23] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[22] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[21] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[20] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[19] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[18] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[17] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[16] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[11] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[10] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[9] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[8] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[7] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[6] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[5] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[11] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[10] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[9] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[8] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[7] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[6] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[5] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[4] in module layer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[23] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[22] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[21] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[20] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[19] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[18] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[17] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[11] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[10] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[9] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[8] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[7] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[6] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[5] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[11] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[10] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[9] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[8] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[7] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[6] in module layer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port monitor_id[5] in module layer is either unconnected or has no load
+INFO: [Synth 8-7082] The signal bmem_dut/mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (5 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 5 for RAM "cuba_lif:/bmem_dut/mem_reg"
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:01:57 . Memory (MB): peak = 3068.160 ; gain = 564.461 ; free physical = 242 ; free virtual = 5192
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 3439.879 ; gain = 936.180 ; free physical = 204 ; free virtual = 4714
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:07 . Memory (MB): peak = 3490.926 ; gain = 987.227 ; free physical = 170 ; free virtual = 4632
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
+|cuba_lif:   | bmem_dut/mem_reg | 20 x 5(WRITE_FIRST)    |   | R | 20 x 5(READ_FIRST)     | W |   | Port A and B     | 1      | 0      | 1               | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[0].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[1].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[2].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[3].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[4].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[5].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[6].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[7].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[8].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[9].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[10].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[11].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[12].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[13].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[14].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[15].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[16].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[17].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[18].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_mid[1].layer/neuron[19].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[0].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[1].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[2].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[3].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[4].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[5].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[6].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[7].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[8].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[9].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[10].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[11].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[12].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[13].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[14].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[15].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[16].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[17].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[18].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_input/neuron[19].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[0].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[1].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[2].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[3].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[4].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[5].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[6].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[7].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[8].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance layer_output/neuron[9].cuba_lif_inst/bmem_dut/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:14 ; elapsed = 00:02:16 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 198 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:18 ; elapsed = 00:02:20 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 198 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:18 ; elapsed = 00:02:20 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 198 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:20 ; elapsed = 00:02:22 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 199 ; free virtual = 4222
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:20 ; elapsed = 00:02:22 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 199 ; free virtual = 4222
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:21 ; elapsed = 00:02:23 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 200 ; free virtual = 4222
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:21 ; elapsed = 00:02:23 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 200 ; free virtual = 4222
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY8   |   600|
+|3     |LUT2     |  1835|
+|4     |LUT3     |  2095|
+|5     |LUT4     |  1765|
+|6     |LUT5     |  4627|
+|7     |LUT6     |  6959|
+|8     |MUXF7    |    38|
+|9     |RAMB18E2 |    50|
+|10    |FDCE     |  2341|
+|11    |IBUF     |    65|
+|12    |OBUF     |    42|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:21 ; elapsed = 00:02:23 . Memory (MB): peak = 3745.926 ; gain = 1242.227 ; free physical = 200 ; free virtual = 4222
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 69 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:15 ; elapsed = 00:02:17 . Memory (MB): peak = 3745.926 ; gain = 1098.441 ; free physical = 192 ; free virtual = 4225
+Synthesis Optimization Complete : Time (s): cpu = 00:02:21 ; elapsed = 00:02:23 . Memory (MB): peak = 3745.934 ; gain = 1242.227 ; free physical = 185 ; free virtual = 4220
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 3745.934 ; gain = 0.000 ; free physical = 492 ; free virtual = 4464
+INFO: [Netlist 29-17] Analyzing 705 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3777.941 ; gain = 0.000 ; free physical = 483 ; free virtual = 4461
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 67 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 65 instances
+
+Synth Design complete | Checksum: 145ab2e6
+INFO: [Common 17-83] Releasing license: Synthesis
+109 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:32 ; elapsed = 00:02:32 . Memory (MB): peak = 3777.977 ; gain = 2287.121 ; free physical = 452 ; free virtual = 4446
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2994.127; main = 2657.125; forked = 378.894
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 5361.238; main = 3777.945; forked = 1615.309
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3801.953 ; gain = 0.000 ; free physical = 450 ; free virtual = 4448
+INFO: [Common 17-1381] The checkpoint '/home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/snncore.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file snncore_utilization_synth.rpt -pb snncore_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 11 20:23:55 2024...

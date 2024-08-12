@@ -1,0 +1,852 @@
+/*
+
+AMD Vivado v2023.2 (64-bit) [Major: 2023, Minor: 2]
+SW Build: 4029153 on Fri Oct 13 20:13:54 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+
+Process ID (PID): 3700
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sun Aug 11 18:22:51 EDT 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Fedora release 39 (Thirty Nine)
+OS Version: 6.8.5-201.fc39.x86_64
+OS Architecture: amd64
+Available processors (cores): 8
+LSB Release Description: Fedora release 39 (Thirty Nine)
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 32, width = 1920, height = 1048
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	17.0.7 64-bit
+JavaFX version: 17.0.1
+Java home: 	/opt/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7
+Java executable: 	/opt/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	johncrespo
+User home directory: /home/johncrespo
+User working directory: /home/johncrespo/quantisenc-public
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2023.2
+RDI_DATADIR: /opt/Xilinx/Vivado/2023.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2023.2/bin
+
+Vivado preferences file: /home/johncrespo/.Xilinx/Vivado/2023.2/vivado.xml
+Vivado preferences directory: /home/johncrespo/.Xilinx/Vivado/2023.2/
+Vivado layouts directory: /home/johncrespo/.Xilinx/Vivado/2023.2/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2023.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/johncrespo/quantisenc-public/vivado.log
+Vivado journal file: 	/home/johncrespo/quantisenc-public/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-3700-fedora
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /opt/Xilinx/Vivado/2023.2
+RDI_BASEROOT: /opt/Xilinx/Vivado
+RDI_BINROOT: /opt/Xilinx/Vivado/2023.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /opt/Xilinx/Vivado/2023.2/data
+RDI_INSTALLROOT: /opt/Xilinx
+RDI_INSTALLVER: 2023.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.7_7
+RDI_LIBDIR: /opt/Xilinx/Vivado/2023.2/lib/lnx64.o/Default:/opt/Xilinx/Vivado/2023.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /opt/Xilinx/Vivado/2023.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /opt/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/johncrespo/quantisenc-public:fedora_1723414956_3657
+RDI_SHARED_DATA: /opt/Xilinx/SharedData/2023.2/data
+RDI_TPS_ROOT: /opt/Xilinx/Vivado/2023.2/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /opt/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2023.2
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2023.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2023.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2023.2
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,456 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.xpr", 1); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.xpr. Version: Vivado v2023.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,530 MB. GUI used memory: 66 MB. Current time: 8/11/24, 6:22:52 PM EDT
+// Tcl Message: open_project /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 107 MB (+110094kb) [00:00:18]
+// [Engine Memory]: 1,655 MB (+1584065kb) [00:00:18]
+// [Engine Memory]: 1,907 MB (+176934kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  1770 ms.
+// Tcl Message: open_project /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2023.2/data/ip'. 
+// [GUI Memory]: 141 MB (+29846kb) [00:00:19]
+// Project name: Neuro_proj; location: /home/johncrespo/quantisenc-public/Neuro_proj; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 8019.570 ; gain = 282.617 ; free physical = 666 ; free virtual = 12024 
+dismissDialog("Open Project"); // bq (Open Project Progress)
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,986 MB. GUI used memory: 78 MB. Current time: 8/11/24, 6:23:12 PM EDT
+// Elapsed time: 12 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 19); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 19); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 19); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 19); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton("OptionPane.button", "Cancel"); // JButton (OptionPane.button)
+selectButton(PAResourceCommand.PACommandNames_SYNTH_SETTINGS, "Vivado Synthesis Defaults"); // g (PAResourceCommand.PACommandNames_SYNTH_SETTINGS)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+// [GUI Memory]: 153 MB (+4891kb) [00:00:46]
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aa
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // g (PAResourceQtoS.SyntheticaStateMonitor_CANCEL, Cancel)
+selectButton("OptionPane.button", "Cancel Process"); // JButton (OptionPane.button)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,835 MB. GUI used memory: 79 MB. Current time: 8/11/24, 6:24:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,835 MB. GUI used memory: 78 MB. Current time: 8/11/24, 6:24:34 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,835 MB. GUI used memory: 78 MB. Current time: 8/11/24, 6:25:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,835 MB. GUI used memory: 78 MB. Current time: 8/11/24, 6:25:34 PM EDT
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:02:16 . Memory (MB): peak = 8147.270 ; gain = 0.000 ; free physical = 290 ; free virtual = 8867 
+// Elapsed Time for: 'q': 02m:15s
+// Elapsed time: 135 seconds
+dismissDialog("Resetting Runs"); // bq (Resetting Runs Progress)
+// Elapsed time: 87 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog0)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Sun Aug 11 18:27:28 2024] Launched synth_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/runme.log [Sun Aug 11 18:27:28 2024] Launched impl_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 10 seconds
+dismissDialog("Starting Design Runs"); // bq (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 1233ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1528 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1314 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1261ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1530 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1023 ms.
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 2186ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2760 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6703 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2123 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6897 ms. Increasing delay to 20691 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 610ms to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1281ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1281 ms.
+// WARNING: HTimer (HMemoryUtils Timer) is taking 1081ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1081 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 934ms to process. Increasing delay to 4000 ms.
+// WARNING: HTimer (StateMonitor Timer) is taking 1047ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1047 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1546 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 5074 ms. Increasing delay to 4000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 777ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4089 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 956ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1018 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2549 ms. Increasing delay to 5000 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 1451ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1604 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 2142ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2151 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2501 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1152ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1385 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2113 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2854 ms. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 357 ms. Decreasing delay to 2357 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1266ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1312 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1221 ms. Increasing delay to 3663 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1704 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4449 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1353ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1353 ms.
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 651ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1979 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1799ms to process. Increasing delay to 7000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3078 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 3484ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3592 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 471ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 13947 ms. Increasing delay to 41841 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 2881ms to process. Increasing delay to 7000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2881 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 16170 ms. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 15 ms. Decreasing delay to 2015 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1575 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1187 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2455 ms. Increasing delay to 7365 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1171 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 858 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // Q.a (dialog1)
+// Elapsed time: 17 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, DRC, Floorplan, Pblock, [DRC UTLZ-1] Resource utilization: CARRY4 over-utilized in Top Level Design (This design requires more CARRY4 cells than are available in the target device. This design requires 20358 of such cell types but only 4400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.). ]", 5); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al (PAResourceItoN.MainMenuMgr_IP, IP)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl (Dont Echo) Command: 'rdi::info_commands {device::*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {debug::*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {*}'
+// WARNING: HEventQueue.dispatchEvent() is taking  1821 ms.
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+selectMoreButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r (PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT)
+// [GUI Memory]: 185 MB (+25781kb) [00:19:44]
+// [GUI Memory]: 316 MB (+127826kb) [00:19:46]
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Kria KV260 Vision AI Starter Kit SOM ; Kria KV260 Vision AI Starter Kit SOM ; xilinx.com ; 1.4 ; Kria KV260 Vision AI Starter Kit SOM ; 784 ; Rev_B01 ; 189 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 6304 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 85 ; 85 ; C ; 0.698 ; 0.720 ; 0.742", 8, "Kria KV260 Vision AI Starter Kit SOM", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU106 Evaluation Platform ; Zynq UltraScale+ ZCU106 Evaluation Platform ; xilinx.com ; 2.6 ; Zynq UltraScale+ ZCU106 Evaluation Platform ; 1156 ; 1.1 ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 13, "Zynq UltraScale+ ZCU106 Evaluation Platform", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+// [GUI Memory]: 340 MB (+7814kb) [00:19:54]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Select Device"); // c (dialog3)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (RDIResource.BaseDialog_APPLY)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Create New Run"); // u (dialog4)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Tcl Command: 'copy_run -name synth_1_copy_1 [get_runs synth_1] '
+// TclEventType: RUN_ADD
+// TclEventType: RUN_MODIFY
+// Tcl Message: copy_run -name synth_1_copy_1 [get_runs synth_1]  
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: REPORT_CREATED
+// TclEventType: REPORT_MODIFY
+// Tcl Message: synth_1_copy_1 
+dismissDialog("Copy Run"); // bq (Copy Run Progress)
+// TclEventType: RUN_MODIFY
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: set_property board_part xilinx.com:zcu106:part0:2.6 [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: INFO: [Project 1-152] Project part set to zynquplus (xczu7ev-ffvc1156-2-e) 
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: reset_property board_connections [get_projects Neuro_proj] 
+dismissDialog("Change Settings"); // bq (Change Settings Progress)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Settings"); // d (dialog2)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog6)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1160] Copying file /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/snncore.dcp to /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.srcs/utils_1/imports/synth_1 and adding it to utils fileset 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog7)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Sun Aug 11 18:43:00 2024] Launched synth_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/runme.log [Sun Aug 11 18:43:00 2024] Launched impl_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 322ms to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 648ms to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 2427ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2516 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1792ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1913 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1877 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 7268ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  7298 ms.
+// WARNING: HTimer (ExpRunMonitor Update Timer) is taking 1300ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4442 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 190857ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  190512 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 576 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 211562 ms. Increasing delay to 634686 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 210619 ms. Increasing delay to 8000 ms.
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 1890ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1891 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1257 ms.
+// Elapsed time: 322 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // Q.a (dialog8)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aa
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectRadioButton(PAResourceItoN.LaunchPanel_LAUNCH_RUNS_ON_REMOTE_HOSTS, "Launch runs on remote hosts"); // a (PAResourceItoN.LaunchPanel_LAUNCH_RUNS_ON_REMOTE_HOSTS)
+selectRadioButton(PAResourceItoN.LaunchPanel_LAUNCH_RUNS_ON_LOCAL_HOST, "Launch runs on local host:"); // a (PAResourceItoN.LaunchPanel_LAUNCH_RUNS_ON_LOCAL_HOST)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog9)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Sun Aug 11 18:49:02 2024] Launched synth_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 14 seconds
+dismissDialog("Starting Design Runs"); // bq (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1362 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5004 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8510 ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1167 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3305 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 615785 ms. Increasing delay to 9000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 6339ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,886 MB. GUI used memory: 105 MB. Current time: 8/11/24, 7:00:52 PM EDT
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 8562ms to process. Increasing delay to 7000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3804 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2239 ms.
+// Elapsed time: 714 seconds
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aa
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6468 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1316 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1430 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 772ms to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 1489ms to process. Increasing delay to 8000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1676 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2905 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 7608ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  7716 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2145 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1444 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 101917ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  103726 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 120896 ms. Increasing delay to 10000 ms.
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 146 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // Q.a (dialog10)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aa
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Sun Aug 11 18:49:03 EDT 2024 ; 00:14:05 ; Vivado Synthesis Defaults (Vivado Synthesis 2023) ; Vivado Synthesis Default Reports (Vivado Synthesis 2023) ; xczu7ev-ffvc1156-2-e ; fedora ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // ao (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE) - Node
+// PAPropertyPanels.initPanels (synth_1) elapsed time: 0.2s
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Reports", 4); // g (RDIResource.PropertiesView_TABBED_PANE)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Messages", 5); // g (RDIResource.PropertiesView_TABBED_PANE)
+// Elapsed time: 12 seconds
+selectLabel((HResource) null, "Dashboard"); // b (Dashboard)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.GenerateReportsDialog_CHECKBOXTREE, "[All, impl_1]", 1, true); // c (PAResourceEtoH.GenerateReportsDialog_CHECKBOXTREE) - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Launch Runs"); // u (dialog12)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al (PAResourceItoN.MainMenuMgr_IP, IP)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al (PAResourceItoN.MainMenuMgr_TEXT_EDITOR, Text Editor)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al (PAResourceItoN.MainMenuMgr_IP, IP)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 5, true); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+selectMoreButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r (PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT)
+// Elapsed time: 17 seconds
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectLinkButton((HResource) null, "Zynq 7000 ZC702 Evaluation Board"); // j
+openHTML ("www.xilinx.com/zc702"); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+openHTML ("www.xilinx.com/zc702"); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+openHTML ("www.xilinx.com/zc702"); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+openHTML ("www.xilinx.com/zc702"); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+// Elapsed time: 17 seconds
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq 7000 ZC702 Evaluation Board ; Zynq 7000 ZC702 Evaluation Board ; xilinx.com ; 1.4 ; Zynq 7000 ZC702 Evaluation Board ; 484 ; 1.0 ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 11, "Zynq 7000 ZC702 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Select Device"); // c (dialog13)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (RDIResource.BaseDialog_APPLY)
+// TclEventType: RUN_MODIFY
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: set_property board_part xilinx.com:zc702:part0:1.4 [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: INFO: [Project 1-152] Project part set to zynq (xc7z020clg484-1) 
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: reset_property board_connections [get_projects Neuro_proj] 
+dismissDialog("Change Settings"); // bq (Change Settings Progress)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Settings"); // d (dialog2)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 15, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "4", 3); // d (PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog14)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Sun Aug 11 19:05:16 2024] Launched synth_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/runme.log [Sun Aug 11 19:05:16 2024] Launched impl_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bq (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 186 ms. Decreasing delay to 2186 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 634 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, snncore_constraints.xdc]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, snncore_constraints.xdc]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, snncore_constraints.xdc]", 5, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// [Engine Memory]: 2,003 MB (+697kb) [00:53:13]
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // Q.a (dialog15)
+// Elapsed time: 47 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 106 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, parameters.vh]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, parameters.vh]", 2, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 119 MB. Current time: 8/11/24, 7:18:43 PM EDT
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "snncore_constraints.xdc", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "snncore_constraints.xdc", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+selectMoreButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r (PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT)
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Parts", 0); // g (PAResourceOtoP.PartChooser_TABBED_PANE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xa7a12tcsg325-1I ; 325 ; 150 ; 8000 ; 16000 ; 20 ; 0 ; 40 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ; -40 ; 100 ; 100 ; I ; 0.95 ; 0.95 ; 1.05", 4, "xa7a12tcsg325-1I", 0); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+// Elapsed time: 20 seconds
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xc7k32"); // OverlayTextField (PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD)
+// Elapsed time: 108 seconds
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xc7"); // OverlayTextField (PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Select Device"); // c (dialog16)
+dismissDialog("Settings"); // d (dialog2)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "parameters.vh", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 26 seconds
+selectCodeEditor("parameters.vh", 182, 314); // ad (parameters.vh)
+selectCodeEditor("parameters.vh", 189, 314); // ad (parameters.vh)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "snncore_constraints.xdc", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,056 MB. GUI used memory: 119 MB. Current time: 8/11/24, 7:22:49 PM EDT
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+selectCodeEditor("snncore.v", 36, 339); // ad (snncore.v)
+// Elapsed time: 37 seconds
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 282, 385); // ad (snncore.v)
+selectCodeEditor("snncore.v", 260, 325); // ad (snncore.v)
+selectCodeEditor("snncore.v", 259, 357); // ad (snncore.v)
+selectCodeEditor("snncore.v", 336, 349); // ad (snncore.v)
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 13 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snncore (snncore.v)]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 19 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al (PAResourceItoN.MainMenuMgr_IP, IP)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al (PAResourceItoN.MainMenuMgr_TEXT_EDITOR, Text Editor)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al (PAResourceItoN.MainMenuMgr_EXPORT, Export)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al (PAResourceItoN.MainMenuMgr_EXPORT, Export)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+selectMoreButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r (PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT)
+// Elapsed time: 13 seconds
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zynq UltraScale+ ZCU104 Evaluation Board ; Zynq UltraScale+ ZCU104 Evaluation Board ; xilinx.com ; 1.1 ; Zynq UltraScale+ ZCU104 Evaluation Board ; 1156 ; RevC ; 360 ; 230400 ; 460800 ; 312 ; 96 ; 1728 ; 11308 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 20 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 8 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 12, "Zynq UltraScale+ ZCU104 Evaluation Board", 4, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+// Elapsed time: 18 seconds
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Cora Z7-10 ; Cora Z7-10 ; digilentinc.com ; 1.1 ; Cora Z7-10 ; 400 ; B.0 ; 100 ; 17600 ; 35200 ; 60 ; 0 ; 80 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 15, "0", 22, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Cora Z7-10 ; Cora Z7-10 ; digilentinc.com ; 1.1 ; Cora Z7-10 ; 400 ; B.0 ; 100 ; 17600 ; 35200 ; 60 ; 0 ; 80 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 15, "0", 21, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Parts", 0); // g (PAResourceOtoP.PartChooser_TABBED_PANE)
+// Elapsed time: 31 seconds
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a15tlftg256-2L ; 256 ; 170 ; 10400 ; 20800 ; 25 ; 0 ; 45 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 5 ;  ;  ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.87 ; 0.87 ; 0.93", 199, "xc7a15tlftg256-2L", 0); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a25tcpg238-2 ; 238 ; 112 ; 14600 ; 29200 ; 45 ; 0 ; 80 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 3 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 201, "238", 1); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+// Elapsed time: 68 seconds
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7k160tfbv484-3 ; 484 ; 285 ; 101400 ; 202800 ; 325 ; 0 ; 600 ; 32 ; 4 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 8 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.97 ; 0.97 ; 1.03", 396, "xc7k160tfbv484-3", 0); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Select Device"); // c (dialog17)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (RDIResource.BaseDialog_APPLY)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Create New Run"); // u (dialog18)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Tcl Command: 'copy_run -name synth_1_copy_2 [get_runs synth_1] '
+// TclEventType: RUN_ADD
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: REPORT_CREATED
+// TclEventType: REPORT_MODIFY
+// Tcl Message: copy_run -name synth_1_copy_2 [get_runs synth_1]  
+// Tcl Message: synth_1_copy_2 
+dismissDialog("Copy Run"); // bq (Copy Run Progress)
+// TclEventType: RUN_MODIFY
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: set_property part xc7k160tfbv484-3 [current_project] 
+// Tcl Message: INFO: [Project 1-154] The current project board 'xilinx.com:zc702:part0:1.4' is reset to empty (None). Use 'Project Settings' part selector (GUI) or issue set_property Tcl Command to set the board again. 
+dismissDialog("Change Settings"); // bq (Change Settings Progress)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Settings"); // d (dialog2)
+selectTree(PAResourceEtoH.GenerateReportsDialog_CHECKBOXTREE, "[All, impl_1]", 1, true); // c (PAResourceEtoH.GenerateReportsDialog_CHECKBOXTREE) - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Launch Runs"); // u (dialog21)
+// Tcl Message: launch_runs synth_1 impl_1 -jobs 4 
+// Tcl Message: ERROR: [Common 17-69] Command failed:  Runs 'synth_1', 'impl_1' need to be reset before launching. The run can be reset using the Tcl command 'reset_run <run name>'. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-69] Command failed:  Runs 'synth_1', 'impl_1' need to be reset before launching. The run can be reset using the Tcl command 'reset_run <run name>'.  
+dismissDialog("Starting Design Runs"); // bq (Starting Design Runs Progress)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aa
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 15, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog22)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.srcs/utils_1/imports/synth_1/snncore.dcp with file /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/snncore.dcp 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "4", 3); // d (PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog23)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Sun Aug 11 19:29:12 2024] Launched synth_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/runme.log [Sun Aug 11 19:29:12 2024] Launched impl_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 611 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // Q.a (dialog24)
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+selectMoreButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r (PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT)
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // g (PAResourceOtoP.PartChooser_TABBED_PANE)
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Virtex Ultrascale+ HBM VCU128 Evaluation Platform ; Virtex Ultrascale+ HBM VCU128 Evaluation Platform ; xilinx.com ; 1.0 ; Virtex Ultrascale+ HBM VCU128 Evaluation Platform ; 2892 ; Rev 1.0 ; 624 ; 1303680 ; 2607360 ; 2016 ; 960 ; 9024 ; 61440 ; 96 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 96 ; 0 ; 0 ; 0 ; 0 ; 0 ; 6 ; 12 ;  ; 8 ;  ;  ; 4 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 10, "Virtex Ultrascale+ HBM VCU128 Evaluation Platform", 0, false); // l (PAResourceAtoD.BoardChooser_BOARD_TABLE)
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Parts", 0); // g (PAResourceOtoP.PartChooser_TABBED_PANE)
+// Elapsed time: 13 seconds
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", (String) null); // OverlayTextField (PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD)
+selectTableHeader(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "LUT Elements", 3); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xcu250-figd2104-2L-e ; 2104 ; 676 ; 1728000 ; 3456000 ; 2688 ; 1280 ; 12288 ; 81920 ; 24 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 24 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 16 ;  ; 12 ;  ;  ; 8 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 1144, "xcu250-figd2104-2L-e", 0); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Select Device"); // c (dialog25)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (RDIResource.BaseDialog_APPLY)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Create New Run"); // u (dialog26)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// Tcl Command: 'copy_run -name synth_1_copy_3 [get_runs synth_1] '
+// TclEventType: RUN_ADD
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: REPORT_CREATED
+// Tcl Message: copy_run -name synth_1_copy_3 [get_runs synth_1]  
+// TclEventType: REPORT_MODIFY
+// Tcl Message: synth_1_copy_3 
+dismissDialog("Copy Run"); // bq (Copy Run Progress)
+// TclEventType: RUN_MODIFY
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PART_MODIFIED
+// Tcl Message: set_property part xcu250-figd2104-2L-e [current_project] 
+dismissDialog("Change Settings"); // bq (Change Settings Progress)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Settings"); // d (dialog2)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 15, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog28)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.srcs/utils_1/imports/synth_1/snncore.dcp with file /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/snncore.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog29)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Sun Aug 11 19:40:29 2024] Launched synth_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/synth_1/runme.log [Sun Aug 11 19:40:29 2024] Launched impl_1... Run output will be captured here: /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1092 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2265 ms. Increasing delay to 6795 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 2649ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2952 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 490ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1594 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 2201ms to process. Increasing delay to 9000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2287 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1042 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 341ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1216 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1164ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1344 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3209 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 13021 ms. Increasing delay to 39063 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1035 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2191 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1504 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 541 ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1449 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 704ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1648 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 972ms to process. Increasing delay to 5000 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 910ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1032 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 2010ms to process. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2108 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1285ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1301 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 35172 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2879 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 548ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2081 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 6446ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  6866 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1254 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 954 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1333 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 884 ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3420 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 798 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1896 ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1284 ms.
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 4091ms to process. Increasing delay to 7000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  5282 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 2822ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3690 ms.
+// WARNING: HTimer (StateMonitor Timer) is taking 1484ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2399 ms.

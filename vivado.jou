@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Aug 11 18:22:37 2024
+# Process ID: 3700
+# Current directory: /home/johncrespo/quantisenc-public
+# Command line: vivado
+# Log file: /home/johncrespo/quantisenc-public/vivado.log
+# Journal file: /home/johncrespo/quantisenc-public/vivado.jou
+# Running On: fedora, OS: Linux, CPU Frequency: 3952.509 MHz, CPU Physical cores: 4, Host memory: 7955 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/johncrespo/quantisenc-public/Neuro_proj/Neuro_proj.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+copy_run -name synth_1_copy_1 [get_runs synth_1] 
+set_property board_part xilinx.com:zcu106:part0:2.6 [current_project]
+reset_property board_connections [get_projects Neuro_proj]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
+reset_property board_connections [get_projects Neuro_proj]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+copy_run -name synth_1_copy_2 [get_runs synth_1] 
+set_property part xc7k160tfbv484-3 [current_project]
+launch_runs synth_1 impl_1 -jobs 4
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+copy_run -name synth_1_copy_3 [get_runs synth_1] 
+set_property part xcu250-figd2104-2L-e [current_project]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1

@@ -1,0 +1,309 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date             : Sun Aug 11 20:40:19 2024
+| Host             : n3-43-220.dhcp.drexel.edu running 64-bit unknown
+| Command          : report_power -file snncore_power_routed.rpt -pb snncore_power_summary_routed.pb -rpx snncore_power_routed.rpx
+| Design           : snncore
+| Device           : xcku5p-ffvb676-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : maximum
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------------+
+| Total On-Chip Power (W)  | 0.991       |
+| Design Power Budget (W)  | 2.000       |
+| Power Budget Margin (W)  | 1.009 (MET) |
+| Dynamic (W)              | 0.305       |
+| Device Static (W)        | 0.685       |
+| Effective TJA (C/W)      | 1.7         |
+| Max Ambient (C)          | 98.3        |
+| Junction Temperature (C) | 26.7        |
+| Confidence Level         | Low         |
+| Setting File             | ---         |
+| Simulation Activity File | ---         |
+| Design Nets Matched      | NA          |
++--------------------------+-------------+
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.024 |        4 |       --- |             --- |
+| CLB Logic      |     0.099 |    20765 |       --- |             --- |
+|   LUT as Logic |     0.095 |    14285 |    216960 |            6.58 |
+|   CARRY8       |     0.004 |      600 |     27120 |            2.21 |
+|   Register     |    <0.001 |     2341 |    433920 |            0.54 |
+|   Others       |     0.000 |      505 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |       38 |    216960 |            0.02 |
+| Signals        |     0.068 |    18115 |       --- |             --- |
+| Block RAM      |     0.101 |       25 |       480 |            5.21 |
+| I/O            |     0.013 |      107 |       280 |           38.21 |
+| Static Power   |     0.685 |          |           |                 |
+| Total          |     0.991 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+------------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A)  | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+------------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |     0.779* |       0.336 |      0.443 |       0.851 | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.051* |       0.001 |      0.051 |       0.227 | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.019* |       0.007 |      0.012 |       0.131 | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.150* |       0.000 |      0.150 |       0.310 | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.045* |       0.007 |      0.038 |       0.388 | Unspecified | NA         |
+| Vcco33     |       3.300 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.000* |       0.000 |      0.000 |       0.050 | Unspecified | NA         |
+| Vcco15     |       1.500 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000* |       0.000 |      0.000 |       0.050 | Unspecified | NA         |
+| Vcco10     |       1.000 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |      0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |      0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+------------+-------------+------------+-------------+-------------+------------+
+* Power-up current exceeds the steady-state current
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.8                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------+--------+-----------------+
+| Clock  | Domain | Constraint (ns) |
++--------+--------+-----------------+
+| memclk | memclk |             3.0 |
+| spkclk | spkclk |          1000.0 |
++--------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------+-----------+
+| Name                         | Power (W) |
++------------------------------+-----------+
+| snncore                      |     0.305 |
+|   cfg_decoder                |     0.017 |
+|   layer_input                |     0.087 |
+|     neuron[0].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[10].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[11].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[12].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[13].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[14].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[15].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[16].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[17].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[18].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[19].cuba_lif_inst |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[1].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[2].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[3].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[4].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[5].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[6].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[7].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[8].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     neuron[9].cuba_lif_inst  |     0.004 |
+|       bmem_dut               |     0.002 |
+|       lif_dut                |     0.002 |
+|     rd_addr_decoder          |     0.002 |
+|   layer_mid[1].layer         |     0.120 |
+|     neuron[0].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[10].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[11].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[12].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[13].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[14].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[15].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[16].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[17].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[18].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[19].cuba_lif_inst |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[1].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[2].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[3].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[4].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[5].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[6].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[7].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[8].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[9].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     rd_addr_decoder          |     0.004 |
+|   layer_output               |     0.064 |
+|     neuron[0].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[1].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[2].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[3].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[4].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[5].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.004 |
+|     neuron[6].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[7].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     neuron[8].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.004 |
+|     neuron[9].cuba_lif_inst  |     0.006 |
+|       bmem_dut               |     0.003 |
+|       lif_dut                |     0.003 |
+|     rd_addr_decoder          |     0.003 |
++------------------------------+-----------+
+
+
